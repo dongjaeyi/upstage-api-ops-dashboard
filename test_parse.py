@@ -1,13 +1,14 @@
-import os, time, json
+import os, time
 import requests
 from dotenv import load_dotenv
+from src.logger import init_db, log_call
 
 load_dotenv()
+init_db()
 
-API_KEY = os.getenv("UPSTAGE_API_KEY")  # 너 .env에 저장한 키 이름에 맞춰
+API_KEY = os.getenv("UPSTAGE_API_KEY")
 URL = "https://api.upstage.ai/v1/document-digitization"
-
-FILENAME = "data/samples/sample.pdf"  # 같은 폴더에 샘플 이미지 하나 두고 이름 맞추기
+FILENAME = "data/samples/sample.pdf"
 
 headers = {"Authorization": f"Bearer {API_KEY}"}
 
@@ -16,7 +17,6 @@ with open(FILENAME, "rb") as f:
     data = {
         "ocr": "force",
         "model": "document-parse",
-        # 일단 이 줄은 있어도 되고 없어도 됨. 예시는 table base64 인코딩.
         "base64_encoding": "['table']",
     }
 
@@ -24,21 +24,6 @@ with open(FILENAME, "rb") as f:
     r = requests.post(URL, headers=headers, files=files, data=data)
     dt = int((time.time() - t0) * 1000)
 
-print("Status:", r.status_code)
-print("Latency(ms):", dt)
-print("Content-Type:", r.headers.get("Content-Type"))
-print("Body:", r.text[:500])  # 너무 길면 앞부분만
-
-os.makedirs("reports", exist_ok=True)
-with open("reports/parse_response.json", "w", encoding="utf-8") as wf:
-    wf.write(r.text)
-print("Saved: reports/parse_response.json")
-
-from src.logger import init_db, log_call
-
-init_db()
-
-# ... requests 호출 후
 resp_bytes = len(r.content) if r.content else 0
 
 error_code = ""
@@ -61,3 +46,13 @@ log_call({
     "error_code": error_code,
     "error_message": error_message,
 })
+
+print("Status:", r.status_code)
+print("Latency(ms):", dt)
+print("Content-Type:", r.headers.get("Content-Type"))
+print("Body:", r.text[:500])
+
+os.makedirs("reports", exist_ok=True)
+with open("reports/parse_response.json", "w", encoding="utf-8") as wf:
+    wf.write(r.text)
+print("Saved: reports/parse_response.json")
