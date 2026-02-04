@@ -11,3 +11,11 @@ __pycache__/
 # local db / outputs
 ops.db
 reports/*.json
+
+# generated outputs
+outputs/
+
+*.db
+__pycache__/
+.venv/
+.env
