@@ -34,3 +34,11 @@ reports/
 # sample resumes (sensitive)
 data/samples/resumes/*
 !data/samples/resumes/.gitkeep
+
+# parsed artifacts (may contain sensitive info)
+data/parsed/
+data/parsed/**
+
+# sample resumes (sensitive)
+data/samples/resumes/*
+!data/samples/resumes/.gitkeep
