@@ -1,116 +1,286 @@
-# Upstage API Ops Dashboard (Document Parse)
+Upstage Resume RAG Summary Builder
 
-A lightweight operations dashboard built on top of **Upstage Document Digitization (Document Parse)** API.
+Flask-based RAG Pipeline & Ops-Aware Dashboard
 
-This project demonstrates how to:
-- Call the Upstage Document Parse API
-- Log API behavior such as latency and status codes
-- Store request results locally
-- Visualize operational metrics using Streamlit
+This project is a Resume RAG (Retrieval-Augmented Generation) Summary Builder built on top of Upstage APIs, with a strong emphasis on API behavior, system design, and operational awareness rather than just model output quality.
 
-The goal is to provide a simple but practical example of **API-level observability** for document AI workflows.
+The goal is to demonstrate how a Product Manager can understand and explain:
 
----
+AI API call flows
 
-## Features
+Authentication and rate limits
 
-### Document Parse API Integration
-- Sends PDF or image documents to the Upstage Document Digitization API
-- Uses multipart form requests as required by the API
-- Captures response metadata for analysis
+Error handling and observability
 
-### Local API Call Logging
-Each API request is logged to a local SQLite database, including:
-- Timestamp
-- Endpoint
-- Model name
-- File name
-- HTTP status code
-- Latency (ms)
-- Response size
-- Error code and message (if any)
+Cost and usage implications
 
-### Streamlit Dashboard
-A Streamlit-based dashboard provides visibility into:
-- Total API calls
-- Success rate
-- P95 latency
-- Status code distribution
-- Latency trends over time
+Design trade-offs in RAG systems
 
----
+The entire system is implemented using Flask + Python modules + HTML/CSS, without relying on external LLM frameworks such as LangChain.
 
-## Project Structure
-├── app.py # Streamlit dashboard
-├── test_parse.py # API call and logging script
+What This Project Demonstrates
+
+End-to-end RAG pipeline design using Upstage APIs
+
+Practical use of Document Parse, Embeddings, and LLM completion
+
+Local vector search using FAISS
+
+API-level logging and observability using SQLite
+
+A lightweight Flask web dashboard for monitoring pipeline state and API usage
+
+This mirrors the kind of internal tooling used to:
+
+Debug AI pipelines
+
+Monitor API usage and failures
+
+Reason about rate limits and cost
+
+Explain system behavior to non-ML stakeholders
+
+System Architecture Overview
+Core Components
+
+Metadata Store: SQLite (ops.db)
+
+Vector DB: FAISS (local)
+
+Web Server: Flask
+
+Execution Model: CLI pipeline executed via subprocess
+
+Upstage APIs Used
+
+Document Parse
+
+OCR + structured JSON extraction from resumes
+
+Embeddings
+
+Model: embedding-query
+
+Used for resume chunk indexing and JD retrieval
+
+Solar Chat Completions
+
+Used for summary rewriting with guardrails
+
+RAG Pipeline Design
+Pipeline Stages
+
+ingest
+
+PDF resume → Document Parse
+
+Structured JSON extraction
+
+Resume metadata and chunks stored in SQLite
+
+index
+
+Resume chunks embedded
+
+FAISS index created locally
+
+retrieve
+
+Job Description embedded
+
+Top-k relevant resume chunks retrieved from FAISS
+
+rewrite_summary
+
+Solar Chat Completion
+
+Guardrail enforced: generation restricted to retrieved chunks only
+
+Output:
+
+Summary text
+
+Citations (chunk_id)
+
+List of used resumes
+
+Execution Modes
+
+pipeline all
+
+Full pipeline execution
+
+Supports:
+
+--skip_ingest
+
+--skip_index (fast iteration when JD changes)
+
+pipeline summary
+
+Runs summary generation only
+
+All pipelines are executed from the repository root using:
+
+python -m src.<pipeline>
+
+Web Dashboard (Flask)
+
+The Flask web application provides operational visibility into the RAG system.
+
+Design Choice
+
+Flask does not import pipeline modules directly
+
+Pipelines are executed via subprocess
+
+This keeps:
+
+CLI and Web concerns cleanly separated
+
+Execution behavior consistent between CLI and UI
+
+Implemented Dashboard Sections
+1. Pipeline & AI Architecture Overview
+
+Displays pipeline stages with status:
+
+RUN / SKIPPED / REUSE
+
+Reflects selected execution mode
+
+2. API Usage & Rate Awareness Panel
+
+Key metrics:
+
+Total API calls
+
+Total execution time
+
+Failure count
+
+Hotspot APIs
+
+Error-focused KPIs:
+
+HTTP 429 (rate limit)
+
+5xx errors
+
+Timeouts
+
+API breakdown table
+
+Recent API events (last 10 calls)
+
+Scope toggle:
+
+Last 48 hours
+
+This run (latest execution)
+
+API Logging & Observability
+Database: ops.db
+
+The api_calls table captures API-level behavior with fields including:
+
+run_id
+
+stage
+
+api_name
+
+endpoint
+
+model
+
+status_code
+
+latency_ms
+
+ok
+
+error_type
+
+error_message
+
+timestamp
+
+Logging Design Notes
+
+If run_id is missing in the payload, a default process-level RUN_ID is assigned
+
+Embedding calls are logged at the API boundary, not just at pipeline level
+
+Current this run grouping is process-based
+
+Sufficient for demos and PM explanation
+
+Can be extended by passing RUN_ID via subprocess environment variables
+
+Project Structure
+.
 ├── src/
-│ └── logger.py # SQLite logging utilities
+│   ├── pipeline/           # ingest / index / retrieve / summary
+│   ├── web_app.py          # Flask web server
+│   ├── upstage_client.py   # API wrappers
+│   └── logger.py           # SQLite logging utilities
 ├── data/
-│ └── samples/ # Sample documents (not included)
-├── reports/ # Sample API responses (optional)
+│   └── samples/            # Sample resumes (not included)
+├── outputs/                # Generated summaries (gitignored)
+├── reports/                # Raw API responses (gitignored)
+├── app.py                  # Flask entry point
 ├── requirements.txt
 ├── .env.example
 └── README.md
 
----
-
-## Requirements
-
-- Python 3.9+
-- Upstage API key
-
----
-
-## Setup (Windows)
-
-```bash
+Setup (Windows)
 python -m venv .venv
 .\.venv\Scripts\activate
 pip install -r requirements.txt
+
 
 Create a .env file in the project root:
 
 UPSTAGE_API_KEY=your_upstage_api_key
 
 
-Note: .env is intentionally excluded from version control.
+.env is intentionally excluded from version control.
 
 How to Run
-1. Generate API call logs
-python test_parse.py
+CLI Pipeline
+python -m src.pipeline all
 
 
-This will:
+Fast iteration:
 
-Send a document to the Upstage Document Parse API
+python -m src.pipeline all --skip_ingest --skip_index
 
-Save the raw response to reports/
-
-Log request metadata to ops.db
-
-2. Launch the dashboard
-streamlit run app.py
+Web Dashboard
+python app.py
 
 
-Open the displayed local URL in your browser to view the dashboard.
+Open the displayed local URL to access the dashboard.
 
-Notes
+Design Philosophy
 
-This project focuses on API behavior and observability, not model training.
+Prefer explicit system design over hidden abstractions
 
-Sample documents should not contain sensitive or personal information.
+Treat AI APIs as production systems, not black boxes
 
-The SQLite database (ops.db) is generated locally and can be safely deleted at any time.
+Optimize for explainability and observability
 
-Possible Extensions
+Keep the project understandable for PMs and non-ML stakeholders
 
-Batch or load testing for rate-limit analysis
+Possible Next Extensions
 
-Additional metrics such as error frequency by document type
+Cost and billing estimation per run
 
-Integration with Information Extraction APIs
+Config trade-off comparison (chunk size, top-k, model choice)
 
-Exporting metrics for external monitoring systems
+Feedback loop from output quality → retrieval tuning
+
+Run-level lineage tracking across subprocess calls
 
 License
 
