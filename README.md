@@ -221,18 +221,30 @@ Can be extended by passing RUN_ID via subprocess environment variables
 Project Structure
 .
 ├── src/
+
 │   ├── pipeline/           # ingest / index / retrieve / summary
+
 │   ├── web_app.py          # Flask web server
+
 │   ├── upstage_client.py   # API wrappers
+
 │   └── logger.py           # SQLite logging utilities
+
 ├── data/
 │   └── samples/            # Sample resumes (not included)
+
 ├── outputs/                # Generated summaries (gitignored)
+
 ├── reports/                # Raw API responses (gitignored)
+
 ├── app.py                  # Flask entry point
+
 ├── requirements.txt
+
 ├── .env.example
+
 └── README.md
+
 
 Setup (Windows)
 python -m venv .venv
