@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume RAG Summary Builder</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Resume RAG Summary Builder</h1>
+
+    <form method="post" action="/run" enctype="multipart/form-data" class="card">
+      <div class="grid">
+        <div class="col">
+          <label for="jd_text">JD 입력 (텍스트)</label>
+          <textarea id="jd_text" name="jd_text" class="jd-textarea" rows="11" placeholder="여기에 JD를 붙여넣기">{{ defaults.jd_text }}</textarea>
+
+
+          <div class="hint">
+            JD 파일 업로드가 있으면 업로드가 우선됩니다.
+          </div>
+
+          <label for="jd_file">JD 파일 업로드 (선택)</label>
+          <input id="jd_file" name="jd_file" type="file" accept=".txt,.md,.pdf,.doc,.docx" />
+        </div>
+
+        <div class="col">
+          <label for="pipeline_mode">pipeline 호출 방식</label>
+          <select id="pipeline_mode" name="pipeline_mode">
+            <option value="all" {% if defaults.pipeline_mode == "all" %}selected{% endif %}>fast mode: pipeline all + skip ingest/index</option>
+            <option value="summary" {% if defaults.pipeline_mode == "summary" %}selected{% endif %}>summary only: pipeline summary</option>
+          </select>
+          <label for="api_scope">API panel scope</label>
+          <select id="api_scope" name="api_scope">
+            <option value="48h" {% if api_panel.scope == "48h" %}selected{% endif %}>Last 48h</option>
+            <option value="run" {% if api_panel.scope == "run" %}selected{% endif %}>This run (latest)</option>
+          </select>
+
+          <label for="confidence">confidence</label>
+          <select id="confidence" name="confidence">
+            <option value="strict" {% if defaults.confidence == "strict" %}selected{% endif %}>strict</option>
+            <option value="balanced" {% if defaults.confidence == "balanced" %}selected{% endif %}>balanced</option>
+            <option value="bold" {% if defaults.confidence == "bold" %}selected{% endif %}>bold</option>
+          </select>
+
+          <label for="resume_mode">resume_mode</label>
+          <select id="resume_mode" name="resume_mode">
+            <option value="diverse" {% if defaults.resume_mode == "diverse" %}selected{% endif %}>diverse</option>
+            <option value="all" {% if defaults.resume_mode == "all" %}selected{% endif %}>all</option>
+            <option value="only" {% if defaults.resume_mode == "only" %}selected{% endif %}>only</option>
+          </select>
+
+          <div class="row">
+            <div class="field">
+              <label for="top_k">top_k</label>
+              <input id="top_k" name="top_k" type="number" min="1" max="50" value="{{ defaults.top_k }}">
+            </div>
+            <div class="field">
+              <label for="final_k">final_k</label>
+              <input id="final_k" name="final_k" type="number" min="1" max="50" value="{{ defaults.final_k }}">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="max_per_resume">max_per_resume</label>
+              <input id="max_per_resume" name="max_per_resume" type="number" min="1" max="20" value="{{ defaults.max_per_resume }}">
+            </div>
+            <div class="field">
+              <label for="max_chars">max_chars</label>
+              <input id="max_chars" name="max_chars" type="number" min="100" max="2000" value="{{ defaults.max_chars }}">
+            </div>
+          </div>
+
+          <button type="submit" class="btn">실행</button>
+        </div>
+      </div>
+    </form>
+    
+    <!-- ✅ Pipeline Overview card -->
+    <section class="pipeline-card">
+      <div class="pipeline-head">
+        <h2>Pipeline & AI Architecture Overview</h2>
+
+        {% if overview.mode == "all" %}
+          <span class="mode-badge">MODE: FAST (all + skip)</span>
+        {% else %}
+          <span class="mode-badge">MODE: SUMMARY ONLY</span>
+        {% endif %}
+      </div>
+
+      <div class="pipeline-flow">
+        <div class="node {{ overview.ingest }}">
+          <div class="top">
+            <div class="title">PDF Ingest</div>
+            <span class="badge {{ overview.ingest }}">{{ overview.ingest | upper }}</span>
+          </div>
+          <div class="desc">Resume PDFs → Parsed JSON</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="node {{ overview.chunking }}">
+          <div class="top">
+            <div class="title">Chunking</div>
+            <span class="badge {{ overview.chunking }}">{{ overview.chunking | upper }}</span>
+          </div>
+          <div class="desc">Text split into searchable chunks</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="node {{ overview.embedding }}">
+          <div class="top">
+            <div class="title">Embedding</div>
+            <span class="badge {{ overview.embedding }}">{{ overview.embedding | upper }}</span>
+          </div>
+          <div class="desc">Resume & JD → Vector space</div>
+          <div class="meta">Upstage Embeddings</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="node {{ overview.search }}">
+          <div class="top">
+            <div class="title">Vector Search</div>
+            <span class="badge {{ overview.search }}">{{ overview.search | upper }}</span>
+          </div>
+          <div class="desc">Semantic retrieval</div>
+          <div class="meta">FAISS (local)</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="node {{ overview.rewrite }}">
+          <div class="top">
+            <div class="title">Rewrite</div>
+            <span class="badge {{ overview.rewrite }}">{{ overview.rewrite | upper }}</span>
+          </div>
+          <div class="desc">Grounded summary generation</div>
+          <div class="meta">Solar LLM</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="node output {{ overview.output }}">
+          <div class="top">
+            <div class="title">Output</div>
+            <span class="badge {{ overview.output }}">{{ overview.output | upper }}</span>
+          </div>
+          <div class="desc">Summary + citations</div>
+          <div class="meta">JSON / Web UI</div>
+        </div>
+      </div>
+
+      <div class="pipeline-note">
+        {% if overview.mode == "all" %}
+          Ingest/Index는 파이프라인에 포함되지만, 현재 실행에서는 skip 플래그로 생략됩니다.
+        {% else %}
+          Summary 모드는 기존 DB/인덱스를 재사용하며, ingest/index 단계는 실행하지 않습니다.
+        {% endif %}
+      </div>
+    </section>
+
+    <!-- ✅ 2) API Usage / Rate Awareness Panel -->
+<section class="card">
+  <div class="pipeline-head" style="margin-bottom: 12px;">
+    <h2>2) API Usage / Rate Awareness</h2>
+    <span class="mode-badge">Window: {{ api_panel.window_label }}</span>
+  </div>
+
+  <div class="hint" style="margin-bottom: 14px;">
+    since {{ api_panel.since }} (UTC). API 호출/지연/실패 지표를 통해 운영 리스크(429, timeout, latency hotspot)를 빠르게 파악합니다.
+  </div>
+
+  <!-- KPI cards -->
+  <div class="row" style="gap: 12px; margin-bottom: 14px;">
+    <div class="panel" style="flex: 1;">
+      <div class="hint">Total API Calls</div>
+      <div style="font-size: 22px; font-weight: 700;">{{ api_panel.kpis.total_calls }}</div>
+    </div>
+
+    <div class="panel" style="flex: 1;">
+      <div class="hint">Total API Time</div>
+      <div style="font-size: 22px; font-weight: 700;">{{ api_panel.kpis.total_time_ms }} ms</div>
+    </div>
+
+    <div class="panel" style="flex: 1;">
+      <div class="hint">Failures</div>
+      <div style="font-size: 22px; font-weight: 700;">
+        {% if api_panel.kpis.failures > 0 %}
+          <span class="bad">{{ api_panel.kpis.failures }}</span>
+        {% else %}
+          <span class="ok">0</span>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="panel" style="flex: 1;">
+      <div class="hint">Latency Hotspot</div>
+      <div style="font-size: 18px; font-weight: 700;">
+        {{ api_panel.kpis.hotspot or "n/a" }}
+      </div>
+    </div>
+  </div>
+  
+  <div class="row" style="gap: 12px; margin-top: 12px;">
+    <div class="panel" style="flex:1;">
+      <div class="hint">429 (Rate Limited)</div>
+      <div style="font-size: 18px; font-weight: 700;">
+        {% if api_panel.kpis.rate_429 > 0 %}<span class="bad">{{ api_panel.kpis.rate_429 }}</span>{% else %}0{% endif %}
+      </div>
+    </div>
+    <div class="panel" style="flex:1;">
+      <div class="hint">5xx</div>
+      <div style="font-size: 18px; font-weight: 700;">
+        {% if api_panel.kpis.err_5xx > 0 %}<span class="bad">{{ api_panel.kpis.err_5xx }}</span>{% else %}0{% endif %}
+      </div>
+    </div>
+    <div class="panel" style="flex:1;">
+      <div class="hint">Timeout</div>
+      <div style="font-size: 18px; font-weight: 700;">
+        {% if api_panel.kpis.timeouts > 0 %}<span class="bad">{{ api_panel.kpis.timeouts }}</span>{% else %}0{% endif %}
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Breakdown table -->
+  <div class="panel" style="overflow-x:auto;">
+    <h3 style="margin-top:0;">API Breakdown</h3>
+    <table style="width:100%; border-collapse: collapse;">
+      <thead>
+        <tr style="text-align:left; border-bottom: 1px solid rgba(255,255,255,0.08);">
+          <th style="padding: 8px 6px;">API</th>
+          <th style="padding: 8px 6px;">Calls</th>
+          <th style="padding: 8px 6px;">Avg ms</th>
+          <th style="padding: 8px 6px;">Max ms</th>
+          <th style="padding: 8px 6px;">Fail</th>
+          <th style="padding: 8px 6px;">429</th>
+          <th style="padding: 8px 6px;">Risk / Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in api_panel.breakdown %}
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+          <td style="padding: 8px 6px; font-weight: 700;">{{ row.api_name }}</td>
+          <td style="padding: 8px 6px;">{{ row.calls }}</td>
+          <td style="padding: 8px 6px;">{{ row.avg_ms }}</td>
+          <td style="padding: 8px 6px;">{{ row.max_ms }}</td>
+          <td style="padding: 8px 6px;">
+            {% if row.fails > 0 %}
+              <span class="bad">{{ row.fails }}</span>
+            {% else %}
+              <span class="ok">0</span>
+            {% endif %}
+          </td>
+          <td style="padding: 8px 6px;">
+            {% if row.rate_limited > 0 %}
+              <span class="bad">{{ row.rate_limited }}</span>
+            {% else %}
+              <span class="hint">0</span>
+            {% endif %}
+          </td>
+          <td style="padding: 8px 6px;" class="hint">
+            {% if row.api_name == 'document_parse' %}
+              PDF당 호출. OCR/구조화 latency가 UX 병목이 될 수 있음.
+            {% elif row.api_name == 'embeddings' %}
+              chunk 수에 비례해 호출/비용 폭증 가능. 캐시, skip_index로 완화.
+            {% elif row.api_name == 'solar_chat' %}
+              품질/비용/latency 트레이드오프 핵심. 프롬프트/토큰 관리 중요.
+            {% else %}
+              -
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Risk notes + recent events -->
+  <div style="margin-top: 14px;">
+    <div class="panel" style="margin-bottom: 12px;">
+      <h3 style="margin-top:0;">Rate / Latency / Failure 포인트</h3>
+      <ul style="margin: 0; padding-left: 18px;">
+        <li>429 발생 시: retry + exponential backoff, 요청 pacing 필요</li>
+        <li>timeout/5xx: 재시도, 부분 결과 유지(graceful degrade) 권장</li>
+        <li>fast mode는 ingest/index를 스킵해 호출량과 리스크를 낮춤</li>
+      </ul>
+    </div>
+
+    <div class="panel">
+      <h3 style="margin-top:0;">Recent API events (last 10)</h3>
+      <div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse: collapse;">
+          <thead>
+            <tr style="text-align:left; border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <th style="padding: 6px;">ts</th>
+              <th style="padding: 6px;">stage</th>
+              <th style="padding: 6px;">api</th>
+              <th style="padding: 6px;">ok</th>
+              <th style="padding: 6px;">ms</th>
+              <th style="padding: 6px;">status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for ev in api_panel.recent %}
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+              <td style="padding: 6px;" class="mono">{{ ev.ts }}</td>
+              <td style="padding: 6px;">{{ ev.stage }}</td>
+              <td style="padding: 6px; font-weight: 700;">{{ ev.api_name }}</td>
+              <td style="padding: 6px;">
+                {% if ev.ok %}
+                  <span class="ok">OK</span>
+                {% else %}
+                  <span class="bad">FAIL</span>
+                {% endif %}
+              </td>
+              <td style="padding: 6px;">{{ ev.latency_ms }}</td>
+              <td style="padding: 6px;" class="hint">{{ ev.status_code or "" }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+    {% if result %}
+      <div class="card">
+        <h2>실행 결과</h2>
+
+        <div class="kv">
+          <div class="k">status</div>
+          <div class="v">
+            {% if result.ok %}
+              <span class="ok">OK</span>
+            {% else %}
+              <span class="bad">FAILED</span>
+            {% endif %}
+          </div>
+
+          <div class="k">return code</div>
+          <div class="v">{{ result.returncode }}</div>
+
+          <div class="k">output json</div>
+          <div class="v">{{ result.output_json_path }}</div>
+
+          <div class="k">command</div>
+          <div class="v mono">{{ " ".join(result.cmd) }}</div>
+        </div>
+
+        {% if result.error %}
+          <div class="alert">{{ result.error }}</div>
+        {% endif %}
+
+        {% if result.data %}
+          <h3>Summary</h3>
+          <pre class="pre">{{ result.data.get("summary", "") }}</pre>
+
+          <div class="row">
+            <div class="panel">
+              <h3>Citations</h3>
+              {% set c = result.data.get("citations", []) %}
+              {% if c %}
+                <ul>
+                  {% for item in c %}
+                    <li class="mono">{{ item }}</li>
+                  {% endfor %}
+                </ul>
+              {% else %}
+                <div class="hint">No citations</div>
+              {% endif %}
+            </div>
+
+            <div class="panel">
+              <h3>Used resumes</h3>
+              {% set u = result.data.get("used_resumes", []) %}
+              {% if u %}
+                <ul>
+                  {% for item in u %}
+                    <li class="mono">{{ item }}</li>
+                  {% endfor %}
+                </ul>
+              {% else %}
+                <div class="hint">No used_resumes</div>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+
+        <h3>stderr</h3>
+        <pre class="pre small">{{ result.stderr }}</pre>
+
+        <h3>stdout</h3>
+        <pre class="pre small">{{ result.stdout }}</pre>
+      </div>
+    {% endif %}
+
+    <div class="footer">
+      Local only. API key is handled by pipeline via .env or environment variable UPSTAGE_API_KEY.
+    </div>
+  </div>
+</body>
+</html>

@@ -1,6 +1,8 @@
 import os, time, base64
 import requests
 from dotenv import load_dotenv
+from time import perf_counter
+from src.logger import log_call, RUN_ID
 
 load_dotenv()
 
@@ -64,3 +66,70 @@ def call_information_extract_async(messages: list, response_format: dict):
     payload = {"model": "information-extract", "messages": messages, "response_format": response_format}
     r = requests.post(IE_ASYNC_ENDPOINT, headers=_headers_json(), json=payload, timeout=120)
     return r.status_code, r.json()
+import os
+from openai import OpenAI
+
+_UPSTAGE_BASE_URL = "https://api.upstage.ai/v1"
+
+def _get_client() -> OpenAI:
+    api_key = os.getenv("UPSTAGE_API_KEY") or os.getenv("UPSTAGE_APIKEY") or os.getenv("UPSTAGE_KEY")
+    if not api_key:
+        raise RuntimeError("Missing UPSTAGE_API_KEY in environment (.env or OS env)")
+    return OpenAI(api_key=api_key, base_url=_UPSTAGE_BASE_URL)
+
+def call_embedding(texts, model: str = "embedding-query") -> list[list[float]]:
+    """
+    texts: str | list[str]
+    returns: list of embedding vectors (list[list[float]])
+    """
+    client = _get_client()
+
+    # normalize to list
+    if isinstance(texts, str):
+        inputs = [texts]
+    else:
+        inputs = list(texts)
+
+    # Upstage 제한: input은 빈 문자열 불가
+    inputs = [t for t in inputs if isinstance(t, str) and t.strip()]
+    if not inputs:
+        return []
+
+    t0 = perf_counter()
+    status_code = None
+    resp_bytes = None
+    err_msg = None
+    ok = 0
+
+    try:
+        resp = client.embeddings.create(
+            input=inputs,
+            model=model,
+        )
+        ok = 1
+
+        # OpenAI-style clients often expose response headers via http layer; 여기선 모름 -> None 유지
+        return [item.embedding for item in resp.data]
+
+    except Exception as e:
+        err_msg = str(e)
+        raise
+
+    finally:
+        latency_ms = int((perf_counter() - t0) * 1000)
+
+        # endpoint를 정확히 모르면 model 기반으로도 충분함 (대시보드용)
+        log_call({
+            "endpoint": "upstage:embeddings.create",
+            "model": model,
+            "filename": None,
+            "status_code": status_code,        # 모르면 None
+            "latency_ms": latency_ms,
+            "response_bytes": resp_bytes,      # 모르면 None
+            "error_code": None,
+            "error_message": err_msg,
+            "run_id": RUN_ID,
+            "stage": "retrieve",
+            "api_name": "embeddings",
+            "ok": ok,
+        })

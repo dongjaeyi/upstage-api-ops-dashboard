@@ -1,0 +1,1727 @@
+{
+  "api": "2.0",
+  "content": {
+    "html": "<h1 id='0' style='font-size:22px'>Dongjae Yi (이동재)</h1>\n<br><h1 id='1' style='font-size:20px'>Senior Systems Engineer | Technical Program Manager</h1>\n<br><p id='2' data-category='paragraph' style='font-size:16px'>Senior systems engineer with 12+ years of experience delivering complex electro-mechanical and software-driven<br>platforms in safety-critical, regulated environments. Specializes in system-level requirements, integration, verification,<br>and root-cause analysis across global R&D teams, with a Master's in Analytics enabling data-driven modeling and<br>quantitative decision-making.</p>\n<p id='3' data-category='paragraph' style='font-size:14px'>dongjaeyi@gmail.com +65 9030 9972 Singapore in linkedin.com/in/dongjaeyi</p>\n<h1 id='4' style='font-size:18px'>SKILLS</h1>\n<br><table id='5' style='font-size:16px'><thead></thead><tbody><tr><td>Systems Engineering & Integration</td><td>System integration, requirements definition and traceability, embedded systems validation</td><td>Verification, Validation & Risk</td><td>Verification and validation, root cause analysis (RCA), FMEA, test strategy</td></tr><tr><td>Technical Leadership & Collaboration</td><td>Cross-functional technical leadership, mentoring, global collaboration</td><td>Data, Modeling & Analytics</td><td>Python, MATLAB, SQL, statistical analysis, design of experiments (DOE), simulation and modeling environments</td></tr></tbody></table>\n<h1 id='6' style='font-size:18px'>WORK EXPERIENCE</h1>\n<p id='7' data-category='paragraph' style='font-size:20px'>Technical Project Manager - Systems Engineering<br>JIOS Aerogel (Electric Vehicle Battery Startup)</p>\n<h1 id='8' style='font-size:14px'>08/2024 - 04/2025</h1>\n<br><p id='9' data-category='paragraph' style='font-size:16px'>Singapore</p>\n<p id='10' data-category='list' style='font-size:16px'> System Architecture & Integration: Defined system-level requirements and performance targets for EV battery<br>thermal protection products, translating customer needs into integrated hardware, material, and process<br>specifications.</p>\n<p id='11' data-category='list' style='font-size:16px'>- System Verification & Risk Analysis: Led system-level verification using structured test strategies, applying root-<br>cause analysis and risk assessment to identify failure modes and improve reliability and manufacturability.</p>\n<p id='12' data-category='list' style='font-size:16px'>- Data-Driven System Optimization: Applied DOE to multi-variable test data to identify performance variability and<br>guide system design and process decisions across prototype validation and production readiness stages.</p>\n<br><h1 id='13' style='font-size:20px'>Senior Systems Engineer | Technical Program Manager</h1>\n<br><h1 id='14' style='font-size:18px'>Continental Automotive</h1>\n<h1 id='15' style='font-size:14px'>01/2022 - 05/2023</h1>\n<br><p id='16' data-category='paragraph' style='font-size:16px'>Singapore</p>\n<p id='17' data-category='list' style='font-size:16px'>- System Architecture & Trade-Offs: Selected and integrated vehicle sensor fusion systems to improve driver access<br>performance, achieving coverage of blind zones without adding hardware cost under commercial constraints.</p>\n<br><p id='18' data-category='list' style='font-size:16px'>System Integration & Validation: Defined localization accuracy metrics and validation criteria, driving system-level<br>testing and client demonstrations while iterating test strategy with software teams to resolve integration failures.</p>\n<br><p id='19' data-category='list' style='font-size:16px'>Technical Leadership & Verification: Mentored test engineers on requirement-based test design, corner-case<br>identification, and failure prioritization, reviewing results with software teams to guide fixes and ensure readiness.</p>\n<br><p id='20' data-category='paragraph' style='font-size:22px'>System Requirements Engineer</p>\n<br><h1 id='21' style='font-size:20px'>Continental Automotive</h1>\n<h1 id='22' style='font-size:14px'>08/2020 - 12/2021</h1>\n<br><p id='23' data-category='paragraph' style='font-size:18px'>Singapore</p>\n<p id='24' data-category='list' style='font-size:16px'>- System Feature Ownership: Owned system-level requirements for remote software updates, diagnostics, data<br>upload, and security, defining interfaces across embedded controllers, gateways, and backend systems.</p>\n<p id='25' data-category='list' style='font-size:16px'>- Requirements Definition & Trade-Offs: Defined functional and security requirements under standardized embedded<br>architectures (AUTOSAR), balancing feature scope with hardware and data storage constraints for reliable remote<br>updates.</p>\n<p id='26' data-category='list' style='font-size:16px'>- Traceability, Compliance & OEM Alignment: Managed requirements in DOORS with end-to-end traceability to test<br>cases, leading change impact analysis and compliance reviews across global regulatory regions.</p>\n<footer id='27' style='font-size:16px'>Page 1 of2</footer>\n<h1 id='28' style='font-size:20px'>WORK EXPERIENCE</h1>\n<br><p id='29' data-category='paragraph' style='font-size:20px'>System Test Manager & Engineer</p>\n<br><h1 id='30' style='font-size:20px'>Continental Automotive</h1>\n<h1 id='31' style='font-size:14px'>01/2011 - 07/2020</h1>\n<br><header id='32' style='font-size:16px'>South Korea, Singapore</header>\n<p id='33' data-category='list' style='font-size:16px'> System Verification Ownership: Owned system-level verification for electro-mechanical embedded control systems,<br>leading end-to-end testing in integrated and simulated environments to validate system behavior.</p>\n<p id='34' data-category='list' style='font-size:16px'>- Test Strategy & Release Readiness: Defined system-focused test strategy, acceptance criteria, and requirement-to-<br>test traceability, prioritizing regression and automation to optimize coverage across multiple concurrent embedded<br>system programs.</p>\n<p id='35' data-category='list' style='font-size:16px'>- Technical Leadership & Infrastructure: Led and mentored a team of five engineers, driving system-level root-cause<br>analysis across software and hardware teams, and designing closed-loop simulation environments supporting<br>regulated standards and external reviews.</p>\n<p id='36' data-category='paragraph' style='font-size:22px'>Founding Member  Engineering Lead</p>\n<br><p id='37' data-category='paragraph' style='font-size:20px'>The Ice Bath Club (Wellness Startup)</p>\n<h1 id='38' style='font-size:14px'>01/2024 - 07/2024</h1>\n<br><p id='39' data-category='paragraph' style='font-size:18px'>Singapore</p>\n<p id='40' data-category='list' style='font-size:16px'>- Chiller & Filtration Systems: Owned and optimized chiller and water filtration systems, improving thermal efficiency,<br>reliability, and performance through continuous monitoring and system-level troubleshooting.</p>\n<p id='41' data-category='list' style='font-size:16px'>- System Troubleshooting & Root-Cause Analysis: Performed daily root cause analysis on novel operational failures in<br>an early stage startup environment, diagnosing mechanical, fluid, and control issues to improve system performance.</p>\n<p id='42' data-category='list' style='font-size:16px'>- Analytics & Performance Optimization: Analyzed operational and customer data to optimize utilization, pricing, and<br>service workflows, translating insights into measurable improvements in efficiency and member experience.</p>\n<h1 id='43' style='font-size:22px'>EDUCATION</h1>\n<br><h1 id='44' style='font-size:20px'>M.Sc in Analytics</h1>\n<br><p id='45' data-category='paragraph' style='font-size:22px'>Georgia Institute of Technology</p>\n<br><h1 id='46' style='font-size:14px'>01/2022 - 05/2025</h1>\n<br><p id='47' data-category='paragraph' style='font-size:14px'>Georgia, United States</p>\n<p id='48' data-category='list' style='font-size:16px'>- Advanced coursework in statistical analysis, machine learning, and optimization, applying quantitative methods to<br>system modeling, simulation, experimentation (DOE), and data-driven engineering decision-making.</p>\n<p id='49' data-category='list' style='font-size:14px'>- Completed a concentrated full-time study period during 06/2023 - 12/2023</p>\n<h1 id='50' style='font-size:20px'>B.Sc in Mechanical Engineering</h1>\n<br><p id='51' data-category='paragraph' style='font-size:22px'>SungKyunKwan University (성균관 대학교)</p>\n<h1 id='52' style='font-size:14px'>03/2002 - 02/2011</h1>\n<br><p id='53' data-category='paragraph' style='font-size:14px'>Suwon, South Korea</p>\n<h1 id='54' style='font-size:18px'>LANGUAGES</h1>\n<p id='55' data-category='paragraph' style='font-size:14px'>Korean<br>Native or Bilingual Proficiency</p>\n<br><p id='56' data-category='paragraph' style='font-size:18px'>English<br>Full Professional Proficiency</p>\n<br><p id='57' data-category='paragraph' style='font-size:16px'>Japanese<br>Limited Working Proficiency</p>\n<br><p id='58' data-category='paragraph' style='font-size:16px'>Mandarin</p>\n<br><p id='59' data-category='paragraph' style='font-size:16px'>Limited Working Proficiency</p>\n<footer id='60' style='font-size:16px'>Page 2 of 2</footer>",
+    "markdown": "",
+    "text": ""
+  },
+  "elements": [
+    {
+      "category": "heading1",
+      "content": {
+        "html": "<h1 id='0' style='font-size:22px'>Dongjae Yi (이동재)</h1>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0379,
+          "y": 0.0263
+        },
+        {
+          "x": 0.3704,
+          "y": 0.0263
+        },
+        {
+          "x": 0.3704,
+          "y": 0.057
+        },
+        {
+          "x": 0.0379,
+          "y": 0.057
+        }
+      ],
+      "id": 0,
+      "page": 1
+    },
+    {
+      "category": "heading1",
+      "content": {
+        "html": "<br><h1 id='1' style='font-size:20px'>Senior Systems Engineer | Technical Program Manager</h1>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0393,
+          "y": 0.0586
+        },
+        {
+          "x": 0.5796,
+          "y": 0.0586
+        },
+        {
+          "x": 0.5796,
+          "y": 0.0764
+        },
+        {
+          "x": 0.0393,
+          "y": 0.0764
+        }
+      ],
+      "id": 1,
+      "page": 1
+    },
+    {
+      "category": "paragraph",
+      "content": {
+        "html": "<br><p id='2' data-category='paragraph' style='font-size:16px'>Senior systems engineer with 12+ years of experience delivering complex electro-mechanical and software-driven<br>platforms in safety-critical, regulated environments. Specializes in system-level requirements, integration, verification,<br>and root-cause analysis across global R&D teams, with a Master's in Analytics enabling data-driven modeling and<br>quantitative decision-making.</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0383,
+          "y": 0.0808
+        },
+        {
+          "x": 0.9459,
+          "y": 0.0808
+        },
+        {
+          "x": 0.9459,
+          "y": 0.1382
+        },
+        {
+          "x": 0.0383,
+          "y": 0.1382
+        }
+      ],
+      "id": 2,
+      "page": 1
+    },
+    {
+      "category": "paragraph",
+      "content": {
+        "html": "<p id='3' data-category='paragraph' style='font-size:14px'>dongjaeyi@gmail.com +65 9030 9972 Singapore in linkedin.com/in/dongjaeyi</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.1471,
+          "y": 0.1658
+        },
+        {
+          "x": 0.8462,
+          "y": 0.1658
+        },
+        {
+          "x": 0.8462,
+          "y": 0.1834
+        },
+        {
+          "x": 0.1471,
+          "y": 0.1834
+        }
+      ],
+      "id": 3,
+      "page": 1
+    },
+    {
+      "category": "heading1",
+      "content": {
+        "html": "<h1 id='4' style='font-size:18px'>SKILLS</h1>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0385,
+          "y": 0.2056
+        },
+        {
+          "x": 0.122,
+          "y": 0.2056
+        },
+        {
+          "x": 0.122,
+          "y": 0.2221
+        },
+        {
+          "x": 0.0385,
+          "y": 0.2221
+        }
+      ],
+      "id": 4,
+      "page": 1
+    },
+    {
+      "category": "table",
+      "content": {
+        "html": "<br><table id='5' style='font-size:16px'><thead></thead><tbody><tr><td>Systems Engineering & Integration</td><td>System integration, requirements definition and traceability, embedded systems validation</td><td>Verification, Validation & Risk</td><td>Verification and validation, root cause analysis (RCA), FMEA, test strategy</td></tr><tr><td>Technical Leadership & Collaboration</td><td>Cross-functional technical leadership, mentoring, global collaboration</td><td>Data, Modeling & Analytics</td><td>Python, MATLAB, SQL, statistical analysis, design of experiments (DOE), simulation and modeling environments</td></tr></tbody></table>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0373,
+          "y": 0.2294
+        },
+        {
+          "x": 0.934,
+          "y": 0.2294
+        },
+        {
+          "x": 0.934,
+          "y": 0.3431
+        },
+        {
+          "x": 0.0373,
+          "y": 0.3431
+        }
+      ],
+      "id": 5,
+      "page": 1
+    },
+    {
+      "category": "heading1",
+      "content": {
+        "html": "<h1 id='6' style='font-size:18px'>WORK EXPERIENCE</h1>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.039,
+          "y": 0.3779
+        },
+        {
+          "x": 0.266,
+          "y": 0.3779
+        },
+        {
+          "x": 0.266,
+          "y": 0.395
+        },
+        {
+          "x": 0.039,
+          "y": 0.395
+        }
+      ],
+      "id": 6,
+      "page": 1
+    },
+    {
+      "category": "paragraph",
+      "content": {
+        "html": "<p id='7' data-category='paragraph' style='font-size:20px'>Technical Project Manager - Systems Engineering<br>JIOS Aerogel (Electric Vehicle Battery Startup)</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0393,
+          "y": 0.4044
+        },
+        {
+          "x": 0.558,
+          "y": 0.4044
+        },
+        {
+          "x": 0.558,
+          "y": 0.4415
+        },
+        {
+          "x": 0.0393,
+          "y": 0.4415
+        }
+      ],
+      "id": 7,
+      "page": 1
+    },
+    {
+      "category": "heading1",
+      "content": {
+        "html": "<h1 id='8' style='font-size:14px'>08/2024 - 04/2025</h1>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0396,
+          "y": 0.445
+        },
+        {
+          "x": 0.1698,
+          "y": 0.445
+        },
+        {
+          "x": 0.1698,
+          "y": 0.4579
+        },
+        {
+          "x": 0.0396,
+          "y": 0.4579
+        }
+      ],
+      "id": 8,
+      "page": 1
+    },
+    {
+      "category": "paragraph",
+      "content": {
+        "html": "<br><p id='9' data-category='paragraph' style='font-size:16px'>Singapore</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.8854,
+          "y": 0.4448
+        },
+        {
+          "x": 0.9572,
+          "y": 0.4448
+        },
+        {
+          "x": 0.9572,
+          "y": 0.4585
+        },
+        {
+          "x": 0.8854,
+          "y": 0.4585
+        }
+      ],
+      "id": 9,
+      "page": 1
+    },
+    {
+      "category": "list",
+      "content": {
+        "html": "<p id='10' data-category='list' style='font-size:16px'> System Architecture & Integration: Defined system-level requirements and performance targets for EV battery<br>thermal protection products, translating customer needs into integrated hardware, material, and process<br>specifications.</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0403,
+          "y": 0.463
+        },
+        {
+          "x": 0.9201,
+          "y": 0.463
+        },
+        {
+          "x": 0.9201,
+          "y": 0.5046
+        },
+        {
+          "x": 0.0403,
+          "y": 0.5046
+        }
+      ],
+      "id": 10,
+      "page": 1
+    },
+    {
+      "category": "list",
+      "content": {
+        "html": "<p id='11' data-category='list' style='font-size:16px'>- System Verification & Risk Analysis: Led system-level verification using structured test strategies, applying root-<br>cause analysis and risk assessment to identify failure modes and improve reliability and manufacturability.</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0393,
+          "y": 0.5102
+        },
+        {
+          "x": 0.9285,
+          "y": 0.5102
+        },
+        {
+          "x": 0.9285,
+          "y": 0.5384
+        },
+        {
+          "x": 0.0393,
+          "y": 0.5384
+        }
+      ],
+      "id": 11,
+      "page": 1
+    },
+    {
+      "category": "list",
+      "content": {
+        "html": "<p id='12' data-category='list' style='font-size:16px'>- Data-Driven System Optimization: Applied DOE to multi-variable test data to identify performance variability and<br>guide system design and process decisions across prototype validation and production readiness stages.</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0394,
+          "y": 0.5429
+        },
+        {
+          "x": 0.935,
+          "y": 0.5429
+        },
+        {
+          "x": 0.935,
+          "y": 0.5719
+        },
+        {
+          "x": 0.0394,
+          "y": 0.5719
+        }
+      ],
+      "id": 12,
+      "page": 1
+    },
+    {
+      "category": "heading1",
+      "content": {
+        "html": "<br><h1 id='13' style='font-size:20px'>Senior Systems Engineer | Technical Program Manager</h1>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0386,
+          "y": 0.5849
+        },
+        {
+          "x": 0.6077,
+          "y": 0.5849
+        },
+        {
+          "x": 0.6077,
+          "y": 0.6034
+        },
+        {
+          "x": 0.0386,
+          "y": 0.6034
+        }
+      ],
+      "id": 13,
+      "page": 1
+    },
+    {
+      "category": "heading1",
+      "content": {
+        "html": "<br><h1 id='14' style='font-size:18px'>Continental Automotive</h1>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0398,
+          "y": 0.6039
+        },
+        {
+          "x": 0.2827,
+          "y": 0.6039
+        },
+        {
+          "x": 0.2827,
+          "y": 0.6203
+        },
+        {
+          "x": 0.0398,
+          "y": 0.6203
+        }
+      ],
+      "id": 14,
+      "page": 1
+    },
+    {
+      "category": "heading1",
+      "content": {
+        "html": "<h1 id='15' style='font-size:14px'>01/2022 - 05/2023</h1>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0398,
+          "y": 0.6253
+        },
+        {
+          "x": 0.1698,
+          "y": 0.6253
+        },
+        {
+          "x": 0.1698,
+          "y": 0.6382
+        },
+        {
+          "x": 0.0398,
+          "y": 0.6382
+        }
+      ],
+      "id": 15,
+      "page": 1
+    },
+    {
+      "category": "paragraph",
+      "content": {
+        "html": "<br><p id='16' data-category='paragraph' style='font-size:16px'>Singapore</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.8855,
+          "y": 0.6254
+        },
+        {
+          "x": 0.957,
+          "y": 0.6254
+        },
+        {
+          "x": 0.957,
+          "y": 0.6388
+        },
+        {
+          "x": 0.8855,
+          "y": 0.6388
+        }
+      ],
+      "id": 16,
+      "page": 1
+    },
+    {
+      "category": "list",
+      "content": {
+        "html": "<p id='17' data-category='list' style='font-size:16px'>- System Architecture & Trade-Offs: Selected and integrated vehicle sensor fusion systems to improve driver access<br>performance, achieving coverage of blind zones without adding hardware cost under commercial constraints.</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0398,
+          "y": 0.6433
+        },
+        {
+          "x": 0.9414,
+          "y": 0.6433
+        },
+        {
+          "x": 0.9414,
+          "y": 0.6714
+        },
+        {
+          "x": 0.0398,
+          "y": 0.6714
+        }
+      ],
+      "id": 17,
+      "page": 1
+    },
+    {
+      "category": "list",
+      "content": {
+        "html": "<br><p id='18' data-category='list' style='font-size:16px'>System Integration & Validation: Defined localization accuracy metrics and validation criteria, driving system-level<br>testing and client demonstrations while iterating test strategy with software teams to resolve integration failures.</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0387,
+          "y": 0.6766
+        },
+        {
+          "x": 0.9386,
+          "y": 0.6766
+        },
+        {
+          "x": 0.9386,
+          "y": 0.7045
+        },
+        {
+          "x": 0.0387,
+          "y": 0.7045
+        }
+      ],
+      "id": 18,
+      "page": 1
+    },
+    {
+      "category": "list",
+      "content": {
+        "html": "<br><p id='19' data-category='list' style='font-size:16px'>Technical Leadership & Verification: Mentored test engineers on requirement-based test design, corner-case<br>identification, and failure prioritization, reviewing results with software teams to guide fixes and ensure readiness.</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0382,
+          "y": 0.7091
+        },
+        {
+          "x": 0.9334,
+          "y": 0.7091
+        },
+        {
+          "x": 0.9334,
+          "y": 0.7384
+        },
+        {
+          "x": 0.0382,
+          "y": 0.7384
+        }
+      ],
+      "id": 19,
+      "page": 1
+    },
+    {
+      "category": "paragraph",
+      "content": {
+        "html": "<br><p id='20' data-category='paragraph' style='font-size:22px'>System Requirements Engineer</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0388,
+          "y": 0.7513
+        },
+        {
+          "x": 0.37,
+          "y": 0.7513
+        },
+        {
+          "x": 0.37,
+          "y": 0.7693
+        },
+        {
+          "x": 0.0388,
+          "y": 0.7693
+        }
+      ],
+      "id": 20,
+      "page": 1
+    },
+    {
+      "category": "heading1",
+      "content": {
+        "html": "<br><h1 id='21' style='font-size:20px'>Continental Automotive</h1>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0395,
+          "y": 0.7706
+        },
+        {
+          "x": 0.2825,
+          "y": 0.7706
+        },
+        {
+          "x": 0.2825,
+          "y": 0.7866
+        },
+        {
+          "x": 0.0395,
+          "y": 0.7866
+        }
+      ],
+      "id": 21,
+      "page": 1
+    },
+    {
+      "category": "heading1",
+      "content": {
+        "html": "<h1 id='22' style='font-size:14px'>08/2020 - 12/2021</h1>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0401,
+          "y": 0.7918
+        },
+        {
+          "x": 0.1691,
+          "y": 0.7918
+        },
+        {
+          "x": 0.1691,
+          "y": 0.8044
+        },
+        {
+          "x": 0.0401,
+          "y": 0.8044
+        }
+      ],
+      "id": 22,
+      "page": 1
+    },
+    {
+      "category": "paragraph",
+      "content": {
+        "html": "<br><p id='23' data-category='paragraph' style='font-size:18px'>Singapore</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.8853,
+          "y": 0.7918
+        },
+        {
+          "x": 0.9574,
+          "y": 0.7918
+        },
+        {
+          "x": 0.9574,
+          "y": 0.8052
+        },
+        {
+          "x": 0.8853,
+          "y": 0.8052
+        }
+      ],
+      "id": 23,
+      "page": 1
+    },
+    {
+      "category": "list",
+      "content": {
+        "html": "<p id='24' data-category='list' style='font-size:16px'>- System Feature Ownership: Owned system-level requirements for remote software updates, diagnostics, data<br>upload, and security, defining interfaces across embedded controllers, gateways, and backend systems.</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0395,
+          "y": 0.8097
+        },
+        {
+          "x": 0.9104,
+          "y": 0.8097
+        },
+        {
+          "x": 0.9104,
+          "y": 0.8379
+        },
+        {
+          "x": 0.0395,
+          "y": 0.8379
+        }
+      ],
+      "id": 24,
+      "page": 1
+    },
+    {
+      "category": "list",
+      "content": {
+        "html": "<p id='25' data-category='list' style='font-size:16px'>- Requirements Definition & Trade-Offs: Defined functional and security requirements under standardized embedded<br>architectures (AUTOSAR), balancing feature scope with hardware and data storage constraints for reliable remote<br>updates.</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.039,
+          "y": 0.8426
+        },
+        {
+          "x": 0.9596,
+          "y": 0.8426
+        },
+        {
+          "x": 0.9596,
+          "y": 0.8838
+        },
+        {
+          "x": 0.039,
+          "y": 0.8838
+        }
+      ],
+      "id": 25,
+      "page": 1
+    },
+    {
+      "category": "list",
+      "content": {
+        "html": "<p id='26' data-category='list' style='font-size:16px'>- Traceability, Compliance & OEM Alignment: Managed requirements in DOORS with end-to-end traceability to test<br>cases, leading change impact analysis and compliance reviews across global regulatory regions.</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0395,
+          "y": 0.8896
+        },
+        {
+          "x": 0.9413,
+          "y": 0.8896
+        },
+        {
+          "x": 0.9413,
+          "y": 0.919
+        },
+        {
+          "x": 0.0395,
+          "y": 0.919
+        }
+      ],
+      "id": 26,
+      "page": 1
+    },
+    {
+      "category": "footer",
+      "content": {
+        "html": "<footer id='27' style='font-size:16px'>Page 1 of2</footer>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.8667,
+          "y": 0.9661
+        },
+        {
+          "x": 0.9571,
+          "y": 0.9661
+        },
+        {
+          "x": 0.9571,
+          "y": 0.9815
+        },
+        {
+          "x": 0.8667,
+          "y": 0.9815
+        }
+      ],
+      "id": 27,
+      "page": 1
+    },
+    {
+      "category": "heading1",
+      "content": {
+        "html": "<h1 id='28' style='font-size:20px'>WORK EXPERIENCE</h1>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0387,
+          "y": 0.0254
+        },
+        {
+          "x": 0.266,
+          "y": 0.0254
+        },
+        {
+          "x": 0.266,
+          "y": 0.042
+        },
+        {
+          "x": 0.0387,
+          "y": 0.042
+        }
+      ],
+      "id": 28,
+      "page": 2
+    },
+    {
+      "category": "paragraph",
+      "content": {
+        "html": "<br><p id='29' data-category='paragraph' style='font-size:20px'>System Test Manager & Engineer</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0396,
+          "y": 0.0523
+        },
+        {
+          "x": 0.3866,
+          "y": 0.0523
+        },
+        {
+          "x": 0.3866,
+          "y": 0.0694
+        },
+        {
+          "x": 0.0396,
+          "y": 0.0694
+        }
+      ],
+      "id": 29,
+      "page": 2
+    },
+    {
+      "category": "heading1",
+      "content": {
+        "html": "<br><h1 id='30' style='font-size:20px'>Continental Automotive</h1>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0402,
+          "y": 0.0714
+        },
+        {
+          "x": 0.2824,
+          "y": 0.0714
+        },
+        {
+          "x": 0.2824,
+          "y": 0.0868
+        },
+        {
+          "x": 0.0402,
+          "y": 0.0868
+        }
+      ],
+      "id": 30,
+      "page": 2
+    },
+    {
+      "category": "heading1",
+      "content": {
+        "html": "<h1 id='31' style='font-size:14px'>01/2011 - 07/2020</h1>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.04,
+          "y": 0.0924
+        },
+        {
+          "x": 0.1702,
+          "y": 0.0924
+        },
+        {
+          "x": 0.1702,
+          "y": 0.105
+        },
+        {
+          "x": 0.04,
+          "y": 0.105
+        }
+      ],
+      "id": 31,
+      "page": 2
+    },
+    {
+      "category": "header",
+      "content": {
+        "html": "<br><header id='32' style='font-size:16px'>South Korea, Singapore</header>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.7983,
+          "y": 0.0926
+        },
+        {
+          "x": 0.9567,
+          "y": 0.0926
+        },
+        {
+          "x": 0.9567,
+          "y": 0.1059
+        },
+        {
+          "x": 0.7983,
+          "y": 0.1059
+        }
+      ],
+      "id": 32,
+      "page": 2
+    },
+    {
+      "category": "list",
+      "content": {
+        "html": "<p id='33' data-category='list' style='font-size:16px'> System Verification Ownership: Owned system-level verification for electro-mechanical embedded control systems,<br>leading end-to-end testing in integrated and simulated environments to validate system behavior.</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0394,
+          "y": 0.1101
+        },
+        {
+          "x": 0.9523,
+          "y": 0.1101
+        },
+        {
+          "x": 0.9523,
+          "y": 0.1386
+        },
+        {
+          "x": 0.0394,
+          "y": 0.1386
+        }
+      ],
+      "id": 33,
+      "page": 2
+    },
+    {
+      "category": "list",
+      "content": {
+        "html": "<p id='34' data-category='list' style='font-size:16px'>- Test Strategy & Release Readiness: Defined system-focused test strategy, acceptance criteria, and requirement-to-<br>test traceability, prioritizing regression and automation to optimize coverage across multiple concurrent embedded<br>system programs.</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0393,
+          "y": 0.1439
+        },
+        {
+          "x": 0.9481,
+          "y": 0.1439
+        },
+        {
+          "x": 0.9481,
+          "y": 0.1857
+        },
+        {
+          "x": 0.0393,
+          "y": 0.1857
+        }
+      ],
+      "id": 34,
+      "page": 2
+    },
+    {
+      "category": "list",
+      "content": {
+        "html": "<p id='35' data-category='list' style='font-size:16px'>- Technical Leadership & Infrastructure: Led and mentored a team of five engineers, driving system-level root-cause<br>analysis across software and hardware teams, and designing closed-loop simulation environments supporting<br>regulated standards and external reviews.</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0389,
+          "y": 0.1906
+        },
+        {
+          "x": 0.9439,
+          "y": 0.1906
+        },
+        {
+          "x": 0.9439,
+          "y": 0.2333
+        },
+        {
+          "x": 0.0389,
+          "y": 0.2333
+        }
+      ],
+      "id": 35,
+      "page": 2
+    },
+    {
+      "category": "paragraph",
+      "content": {
+        "html": "<p id='36' data-category='paragraph' style='font-size:22px'>Founding Member  Engineering Lead</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0396,
+          "y": 0.2512
+        },
+        {
+          "x": 0.4318,
+          "y": 0.2512
+        },
+        {
+          "x": 0.4318,
+          "y": 0.2691
+        },
+        {
+          "x": 0.0396,
+          "y": 0.2691
+        }
+      ],
+      "id": 36,
+      "page": 2
+    },
+    {
+      "category": "paragraph",
+      "content": {
+        "html": "<br><p id='37' data-category='paragraph' style='font-size:20px'>The Ice Bath Club (Wellness Startup)</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0401,
+          "y": 0.2703
+        },
+        {
+          "x": 0.4016,
+          "y": 0.2703
+        },
+        {
+          "x": 0.4016,
+          "y": 0.2878
+        },
+        {
+          "x": 0.0401,
+          "y": 0.2878
+        }
+      ],
+      "id": 37,
+      "page": 2
+    },
+    {
+      "category": "heading1",
+      "content": {
+        "html": "<h1 id='38' style='font-size:14px'>01/2024 - 07/2024</h1>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0406,
+          "y": 0.2917
+        },
+        {
+          "x": 0.1704,
+          "y": 0.2917
+        },
+        {
+          "x": 0.1704,
+          "y": 0.3044
+        },
+        {
+          "x": 0.0406,
+          "y": 0.3044
+        }
+      ],
+      "id": 38,
+      "page": 2
+    },
+    {
+      "category": "paragraph",
+      "content": {
+        "html": "<br><p id='39' data-category='paragraph' style='font-size:18px'>Singapore</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.8859,
+          "y": 0.2919
+        },
+        {
+          "x": 0.9566,
+          "y": 0.2919
+        },
+        {
+          "x": 0.9566,
+          "y": 0.3047
+        },
+        {
+          "x": 0.8859,
+          "y": 0.3047
+        }
+      ],
+      "id": 39,
+      "page": 2
+    },
+    {
+      "category": "list",
+      "content": {
+        "html": "<p id='40' data-category='list' style='font-size:16px'>- Chiller & Filtration Systems: Owned and optimized chiller and water filtration systems, improving thermal efficiency,<br>reliability, and performance through continuous monitoring and system-level troubleshooting.</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0395,
+          "y": 0.3092
+        },
+        {
+          "x": 0.9574,
+          "y": 0.3092
+        },
+        {
+          "x": 0.9574,
+          "y": 0.3378
+        },
+        {
+          "x": 0.0395,
+          "y": 0.3378
+        }
+      ],
+      "id": 40,
+      "page": 2
+    },
+    {
+      "category": "list",
+      "content": {
+        "html": "<p id='41' data-category='list' style='font-size:16px'>- System Troubleshooting & Root-Cause Analysis: Performed daily root cause analysis on novel operational failures in<br>an early stage startup environment, diagnosing mechanical, fluid, and control issues to improve system performance.</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.04,
+          "y": 0.343
+        },
+        {
+          "x": 0.9573,
+          "y": 0.343
+        },
+        {
+          "x": 0.9573,
+          "y": 0.3709
+        },
+        {
+          "x": 0.04,
+          "y": 0.3709
+        }
+      ],
+      "id": 41,
+      "page": 2
+    },
+    {
+      "category": "list",
+      "content": {
+        "html": "<p id='42' data-category='list' style='font-size:16px'>- Analytics & Performance Optimization: Analyzed operational and customer data to optimize utilization, pricing, and<br>service workflows, translating insights into measurable improvements in efficiency and member experience.</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0393,
+          "y": 0.3758
+        },
+        {
+          "x": 0.9529,
+          "y": 0.3758
+        },
+        {
+          "x": 0.9529,
+          "y": 0.4042
+        },
+        {
+          "x": 0.0393,
+          "y": 0.4042
+        }
+      ],
+      "id": 42,
+      "page": 2
+    },
+    {
+      "category": "heading1",
+      "content": {
+        "html": "<h1 id='43' style='font-size:22px'>EDUCATION</h1>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0401,
+          "y": 0.4429
+        },
+        {
+          "x": 0.1806,
+          "y": 0.4429
+        },
+        {
+          "x": 0.1806,
+          "y": 0.46
+        },
+        {
+          "x": 0.0401,
+          "y": 0.46
+        }
+      ],
+      "id": 43,
+      "page": 2
+    },
+    {
+      "category": "heading1",
+      "content": {
+        "html": "<br><h1 id='44' style='font-size:20px'>M.Sc in Analytics</h1>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0395,
+          "y": 0.47
+        },
+        {
+          "x": 0.2193,
+          "y": 0.47
+        },
+        {
+          "x": 0.2193,
+          "y": 0.487
+        },
+        {
+          "x": 0.0395,
+          "y": 0.487
+        }
+      ],
+      "id": 44,
+      "page": 2
+    },
+    {
+      "category": "paragraph",
+      "content": {
+        "html": "<br><p id='45' data-category='paragraph' style='font-size:22px'>Georgia Institute of Technology</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0399,
+          "y": 0.4893
+        },
+        {
+          "x": 0.3574,
+          "y": 0.4893
+        },
+        {
+          "x": 0.3574,
+          "y": 0.5071
+        },
+        {
+          "x": 0.0399,
+          "y": 0.5071
+        }
+      ],
+      "id": 45,
+      "page": 2
+    },
+    {
+      "category": "heading1",
+      "content": {
+        "html": "<br><h1 id='46' style='font-size:14px'>01/2022 - 05/2025</h1>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0403,
+          "y": 0.51
+        },
+        {
+          "x": 0.1696,
+          "y": 0.51
+        },
+        {
+          "x": 0.1696,
+          "y": 0.5228
+        },
+        {
+          "x": 0.0403,
+          "y": 0.5228
+        }
+      ],
+      "id": 46,
+      "page": 2
+    },
+    {
+      "category": "paragraph",
+      "content": {
+        "html": "<br><p id='47' data-category='paragraph' style='font-size:14px'>Georgia, United States</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.8046,
+          "y": 0.5106
+        },
+        {
+          "x": 0.9568,
+          "y": 0.5106
+        },
+        {
+          "x": 0.9568,
+          "y": 0.5235
+        },
+        {
+          "x": 0.8046,
+          "y": 0.5235
+        }
+      ],
+      "id": 47,
+      "page": 2
+    },
+    {
+      "category": "list",
+      "content": {
+        "html": "<p id='48' data-category='list' style='font-size:16px'>- Advanced coursework in statistical analysis, machine learning, and optimization, applying quantitative methods to<br>system modeling, simulation, experimentation (DOE), and data-driven engineering decision-making.</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0385,
+          "y": 0.5285
+        },
+        {
+          "x": 0.9255,
+          "y": 0.5285
+        },
+        {
+          "x": 0.9255,
+          "y": 0.557
+        },
+        {
+          "x": 0.0385,
+          "y": 0.557
+        }
+      ],
+      "id": 48,
+      "page": 2
+    },
+    {
+      "category": "list",
+      "content": {
+        "html": "<p id='49' data-category='list' style='font-size:14px'>- Completed a concentrated full-time study period during 06/2023 - 12/2023</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0383,
+          "y": 0.5616
+        },
+        {
+          "x": 0.6338,
+          "y": 0.5616
+        },
+        {
+          "x": 0.6338,
+          "y": 0.5757
+        },
+        {
+          "x": 0.0383,
+          "y": 0.5757
+        }
+      ],
+      "id": 49,
+      "page": 2
+    },
+    {
+      "category": "heading1",
+      "content": {
+        "html": "<h1 id='50' style='font-size:20px'>B.Sc in Mechanical Engineering</h1>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0396,
+          "y": 0.5938
+        },
+        {
+          "x": 0.3649,
+          "y": 0.5938
+        },
+        {
+          "x": 0.3649,
+          "y": 0.6119
+        },
+        {
+          "x": 0.0396,
+          "y": 0.6119
+        }
+      ],
+      "id": 50,
+      "page": 2
+    },
+    {
+      "category": "paragraph",
+      "content": {
+        "html": "<br><p id='51' data-category='paragraph' style='font-size:22px'>SungKyunKwan University (성균관 대학교)</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0393,
+          "y": 0.613
+        },
+        {
+          "x": 0.4438,
+          "y": 0.613
+        },
+        {
+          "x": 0.4438,
+          "y": 0.63
+        },
+        {
+          "x": 0.0393,
+          "y": 0.63
+        }
+      ],
+      "id": 51,
+      "page": 2
+    },
+    {
+      "category": "heading1",
+      "content": {
+        "html": "<h1 id='52' style='font-size:14px'>03/2002 - 02/2011</h1>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0403,
+          "y": 0.6342
+        },
+        {
+          "x": 0.1687,
+          "y": 0.6342
+        },
+        {
+          "x": 0.1687,
+          "y": 0.6474
+        },
+        {
+          "x": 0.0403,
+          "y": 0.6474
+        }
+      ],
+      "id": 52,
+      "page": 2
+    },
+    {
+      "category": "paragraph",
+      "content": {
+        "html": "<br><p id='53' data-category='paragraph' style='font-size:14px'>Suwon, South Korea</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.8192,
+          "y": 0.6343
+        },
+        {
+          "x": 0.9577,
+          "y": 0.6343
+        },
+        {
+          "x": 0.9577,
+          "y": 0.6478
+        },
+        {
+          "x": 0.8192,
+          "y": 0.6478
+        }
+      ],
+      "id": 53,
+      "page": 2
+    },
+    {
+      "category": "heading1",
+      "content": {
+        "html": "<h1 id='54' style='font-size:18px'>LANGUAGES</h1>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0395,
+          "y": 0.6863
+        },
+        {
+          "x": 0.1857,
+          "y": 0.6863
+        },
+        {
+          "x": 0.1857,
+          "y": 0.7034
+        },
+        {
+          "x": 0.0395,
+          "y": 0.7034
+        }
+      ],
+      "id": 54,
+      "page": 2
+    },
+    {
+      "category": "paragraph",
+      "content": {
+        "html": "<p id='55' data-category='paragraph' style='font-size:14px'>Korean<br>Native or Bilingual Proficiency</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.0391,
+          "y": 0.7133
+        },
+        {
+          "x": 0.2441,
+          "y": 0.7133
+        },
+        {
+          "x": 0.2441,
+          "y": 0.7418
+        },
+        {
+          "x": 0.0391,
+          "y": 0.7418
+        }
+      ],
+      "id": 55,
+      "page": 2
+    },
+    {
+      "category": "paragraph",
+      "content": {
+        "html": "<br><p id='56' data-category='paragraph' style='font-size:18px'>English<br>Full Professional Proficiency</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.2688,
+          "y": 0.7126
+        },
+        {
+          "x": 0.4598,
+          "y": 0.7126
+        },
+        {
+          "x": 0.4598,
+          "y": 0.7418
+        },
+        {
+          "x": 0.2688,
+          "y": 0.7418
+        }
+      ],
+      "id": 56,
+      "page": 2
+    },
+    {
+      "category": "paragraph",
+      "content": {
+        "html": "<br><p id='57' data-category='paragraph' style='font-size:16px'>Japanese<br>Limited Working Proficiency</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.5254,
+          "y": 0.7135
+        },
+        {
+          "x": 0.7179,
+          "y": 0.7135
+        },
+        {
+          "x": 0.7179,
+          "y": 0.7423
+        },
+        {
+          "x": 0.5254,
+          "y": 0.7423
+        }
+      ],
+      "id": 57,
+      "page": 2
+    },
+    {
+      "category": "paragraph",
+      "content": {
+        "html": "<br><p id='58' data-category='paragraph' style='font-size:16px'>Mandarin</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.7551,
+          "y": 0.7133
+        },
+        {
+          "x": 0.8313,
+          "y": 0.7133
+        },
+        {
+          "x": 0.8313,
+          "y": 0.7268
+        },
+        {
+          "x": 0.7551,
+          "y": 0.7268
+        }
+      ],
+      "id": 58,
+      "page": 2
+    },
+    {
+      "category": "paragraph",
+      "content": {
+        "html": "<br><p id='59' data-category='paragraph' style='font-size:16px'>Limited Working Proficiency</p>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.7553,
+          "y": 0.7276
+        },
+        {
+          "x": 0.9458,
+          "y": 0.7276
+        },
+        {
+          "x": 0.9458,
+          "y": 0.7417
+        },
+        {
+          "x": 0.7553,
+          "y": 0.7417
+        }
+      ],
+      "id": 59,
+      "page": 2
+    },
+    {
+      "category": "footer",
+      "content": {
+        "html": "<footer id='60' style='font-size:16px'>Page 2 of 2</footer>",
+        "markdown": "",
+        "text": ""
+      },
+      "coordinates": [
+        {
+          "x": 0.8673,
+          "y": 0.9669
+        },
+        {
+          "x": 0.9564,
+          "y": 0.9669
+        },
+        {
+          "x": 0.9564,
+          "y": 0.9811
+        },
+        {
+          "x": 0.8673,
+          "y": 0.9811
+        }
+      ],
+      "id": 60,
+      "page": 2
+    }
+  ],
+  "model": "document-parse-nightly",
+  "ocr": false,
+  "usage": {
+    "pages": 2,
+    "standard": [
+      1,
+      2
+    ]
+  }
+}
